@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TaskFlow - Manajemen Tugas</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>TaskFlow</h1>
+        <p>Kelola tugas kuliah dengan lebih mudah.</p>
+      </header>
+
+      <section class="summary">
+        <div class="card">
+          <span>Total Tugas</span>
+          <h2 id="totalTasks">0</h2>
+        </div>
+        <div class="card">
+          <span>Belum Selesai</span>
+          <h2 id="pendingTasks">0</h2>
+        </div>
+        <div class="card">
+          <span>Selesai</span>
+          <h2 id="completedTasks">0</h2>
+        </div>
+      </section>
+
+      <section class="task-form">
+        <h2>Tambah Tugas Baru</h2>
+        <form id="taskForm">
+          <input
+            type="text"
+            id="taskInput"
+            placeholder="Masukkan nama tugas..."
+            required
+          />
+          <button type="submit">Tambah Tugas</button>
+        </form>
+      </section>
+
+      <section class="task-list">
+        <h2>Daftar Tugas</h2>
+        <ul id="taskList"></ul>
+        <p id="emptyMessage">Belum ada tugas. Tambahkan tugas pertamamu!</p>
+      </section>
+
+      <footer>
+        <p>TaskFlow - Deployment menggunakan Container dan CI/CD</p>
+      </footer>
+    </div>
+
+    <script src="{{ url_for('static', filename='app.js') }}"></script>
+  </body>
+</html>

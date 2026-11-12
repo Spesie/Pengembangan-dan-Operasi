@@ -1,0 +1,141 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #f4f6fb;
+    color: #20283a;
+    min-height: 100vh;
+    padding: 40px 20px;
+}
+
+.container {
+    max-width: 1000px;
+    margin: auto;
+}
+
+header {
+    margin-bottom: 32px;
+}
+
+header h1 {
+    font-size: 34px;
+    color: #3347b0;
+    margin-bottom: 8px;
+}
+
+header p {
+    color: #718096;
+    font-size: 15px;
+}
+
+.stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    margin-bottom: 30px;
+}
+
+.stat-card {
+    background: white;
+    padding: 25px;
+    border-radius: 14px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.04);
+}
+
+.stat-card p {
+    color: #718096;
+    margin-bottom: 12px;
+}
+
+.stat-card h2 {
+    font-size: 30px;
+    color: #3347b0;
+}
+
+section {
+    background: white;
+    padding: 28px;
+    border-radius: 14px;
+    margin-bottom: 24px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.04);
+}
+
+section h2 {
+    font-size: 21px;
+    margin-bottom: 20px;
+}
+
+input {
+    padding: 13px 15px;
+    border: 1px solid #dce1ec;
+    border-radius: 8px;
+    width: 70%;
+    max-width: 500px;
+    outline: none;
+    font-size: 14px;
+}
+
+input:focus {
+    border-color: #5268dc;
+}
+
+button {
+    padding: 13px 20px;
+    border: none;
+    border-radius: 8px;
+    background: #5268dc;
+    color: white;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+button:hover {
+    background: #394fbf;
+}
+
+.task-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    border: 1px solid #edf0f5;
+    border-radius: 9px;
+    margin-bottom: 12px;
+}
+
+.task-item.completed {
+    opacity: 0.6;
+    text-decoration: line-through;
+}
+
+.task-item button {
+    margin-left: 6px;
+    padding: 8px 12px;
+}
+
+footer {
+    text-align: center;
+    color: #8993a7;
+    font-size: 13px;
+    padding: 20px;
+}
+
+@media (max-width: 600px) {
+    .stats {
+        grid-template-columns: 1fr;
+    }
+
+    input {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .task-item {
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+}
